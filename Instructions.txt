@@ -1,0 +1,28 @@
+## Structure :
+
+- bin : Dossier contenant les executables
+- include : Dossier contenant les fichiers d'entête (.h)
+- obj : Dossier contenant les fichiers objets (.o)
+- src : Dossier contenant les fichiers sources (.cpp)
+- tests : Dossier contenant le fichier de tests (tests.cpp)
+
+## Commandes :
+
+** Programme Principal :
+
+- Compilation :
+    g++ -c src/utils.cpp -o obj/utils.o -I include
+    g++ -c src/cesar.cpp -o obj/cesar.o -I include
+    g++ -c src/crack.cpp -o obj/crack.o -I include
+    g++ src/main.cpp obj/utils.o obj/cesar.o obj/crack.o -o bin/main -I include
+
+- Exécution : 
+    ./bin/main
+
+** Tests : 
+
+- Compilation :
+    g++ tests/tests.cpp obj/utils.o obj/cesar.o obj/crack.o -o bin/tests -I include
+
+- Exécution :
+    ./bin/tests
