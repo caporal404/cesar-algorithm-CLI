@@ -1,8 +1,6 @@
 ## Structure :
 
-- bin : Dossier contenant les executables
 - include : Dossier contenant les fichiers d'entête (.h)
-- obj : Dossier contenant les fichiers objets (.o)
 - src : Dossier contenant les fichiers sources (.cpp)
 - tests : Dossier contenant le fichier de tests (tests.cpp)
 
