@@ -1,21 +1,20 @@
-# ALGORITHME DE CESAR
+# Algorithme de César
+
 **Auteur : caporal404**  
 **Langage : C++**
 
 ---
 
-## 1. Introduction  
+## Introduction  
+
 L’algorithme de César est une méthode de chiffrement par substitution dans laquelle chaque lettre du message clair est remplacée par une autre lettre située à un certain nombre fixe de positions plus loin dans l’alphabet. 
 Ce projet implémente une version en ligne de commande (CLI) de l'algorithme César, en C++.
-Ses parties sont :  
-- Le **chiffrement** et le **déchiffrement** des messages.  
-- Le **crackage** par force brute et par **analyse de fréquences**.
 
 ---
 
-## 2. Fonctionnalités principales  
+## Fonctionnalités principales  
 
-### 2.1. Chiffrement  
+### Chiffrement  
 Le message est chiffré en décalant chaque lettre de l'alphabet d'une clé donnée.  
 - **Entrées** :  
   - Un message clair.  
@@ -25,7 +24,7 @@ Le message est chiffré en décalant chaque lettre de l'alphabet d'une clé donn
   - Les espaces, les caractères spéciaux et les chiffres ne sont pas modifiés.  
   - Les majuscules/minuscules sont conservées.
 
-### 2.2. Déchiffrement  
+### Déchiffrement  
 Le déchiffrement utilise la clé pour inverser le processus de chiffrement.  
 - **Entrées** :  
   - Un message chiffré.  
@@ -34,28 +33,28 @@ Le déchiffrement utilise la clé pour inverser le processus de chiffrement.
 
 ---
 
-## 3. Crackage du message chiffré  
+## Crackage du message chiffré  
 Deux méthodes sont utilisées pour casser un message chiffré sans connaître la clé :  
 
-### 3.1. Force brute  
+### Force brute  
 - Teste toutes les clés possibles (de 1 à 25).  
 - Affiche toutes les tentatives pour permettre à l’utilisateur d’identifier le message clair.  
 
-### 3.2. Analyse de fréquences  
+### Analyse de fréquences  
 - Compte le nombre d’occurrences de chaque lettre dans le message chiffré.  
 - Compare les lettres les plus fréquentes dans le message avec celles de la langue française (`E`, `S`, `A`, etc.).  
 - Déduit une ou plusieurs clés probables et propose des tentatives de déchiffrement.
 
 ---
 
-## 4. Organisation du code
+## Organisation du code
 
-### 4.1. Fichiers importants
+### Fonctions importants
 - **`cesar()`** : Chiffre ou déchiffre un message selon une clé donnée.  
 - **`forceBrute()`** : Affiche toutes les tentatives possibles par force brute.  
 - **`analyseDeFrequences()`** : Analyse les fréquences des lettres pour deviner la clé.  
 
-### 4.2. Fonctions auxiliaires
+### Fonctions auxiliaires
 - **Gestion des entrées utilisateur** :  
   - `lireNombre` : Récupère un entier valide au clavier.  
   - `lireChar` : Récupère un caractère valide.  
@@ -65,7 +64,7 @@ Deux méthodes sont utilisées pour casser un message chiffré sans connaître l
 
 ---
 
-## 5. Interface utilisateur  
+## Interface utilisateur  
 Le programme affiche un menu principal :  
 1. **Chiffrement** : Saisir un message et une clé pour obtenir le message chiffré.  
 2. **Déchiffrement** : Saisir un message chiffré et une clé pour retrouver le message clair.  
@@ -76,7 +75,7 @@ Le menu est simple et interactif pour une meilleure expérience utilisateur.
 
 ---
 
-## 6. Limites et améliorations possibles
+## Limites et améliorations possibles
 - **Limites :**  
   - Efficacité réduite pour des messages courts en analyse de fréquences.  
   - Pas de prise en charge d’autres alphabets (ex. : caractères accentués).  
@@ -86,7 +85,7 @@ Le menu est simple et interactif pour une meilleure expérience utilisateur.
 
 ---
 
-## 7. Exemple d’exécution
+## Exemple d’exécution
 1. **Chiffrement** :  
    **Entrée** : `Message = "Salut !", Clé = 3`  
    **Sortie** : `Vdoxw !`  
@@ -103,5 +102,5 @@ Le menu est simple et interactif pour une meilleure expérience utilisateur.
 
 ---
 
-## 8. Conclusion
+## Conclusion
 Ce projet montre comment appliquer et casser l’algorithme de César à travers des outils interactifs et éducatifs. Il met en évidence les forces et les faiblesses de ce chiffrement classique tout en offrant des méthodes efficaces pour le déchiffrer.  
